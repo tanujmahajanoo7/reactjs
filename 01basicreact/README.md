@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Basic React App with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 📋 Description
 
-In the project directory, you can run:
+This project demonstrates the initial setup of a React application using Create React App. It includes a simple component structure with a YouTube component example.
 
 ### `npm start`
 
@@ -29,11 +29,22 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🏗️ Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+  ├── App.js        # Main App component
+  ├── index.js      # Application entry point
+  └── Youtube.jsx   # YouTube component example
+public/
+  ├── index.html    # HTML template
+  └── ...
+```
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 

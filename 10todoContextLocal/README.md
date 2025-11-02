@@ -1,12 +1,113 @@
-# React + Vite
+# Todo App with Context API and Local Storage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React todo application that uses Context API for state management and local storage for data persistence.
 
-Currently, two official plugins are available:
+## 📋 Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a full-featured todo application that demonstrates Context API for state management and localStorage for persisting data. Users can add, update, delete, and mark todos as complete, with all data saved to browser local storage.
 
-## Expanding the ESLint configuration
+## 🎯 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Add new todos
+- Update existing todos
+- Delete todos
+- Toggle todo completion status
+- Data persistence with localStorage
+- Context API for state management
+- Clean, modern UI
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v14 or higher)
+- npm
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+```
+
+The app will open at `http://localhost:5173` (or another port if 5173 is busy).
+
+## 📦 Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
+
+## 🏗️ Project Structure
+
+```
+src/
+  ├── App.jsx                # Main App component with todo logic
+  ├── components/
+  │   ├── TodoForm.jsx       # Form component for adding/editing todos
+  │   ├── TodoItem.jsx       # Individual todo item component
+  │   └── index.js           # Component exports
+  ├── contexts/
+  │   ├── TodoContext.js     # Todo context definition
+  │   └── index.js           # Context exports
+  ├── main.jsx               # Application entry point
+  ├── App.css                # Component styles
+  └── index.css              # Global styles
+```
+
+## 💡 Key Concepts Demonstrated
+
+- **Context API**: Managing todo state globally
+- **localStorage**: Persisting data in browser storage
+- **useState Hook**: Managing todos array
+- **useEffect Hook**: Loading from and saving to localStorage
+- **CRUD Operations**: Create, Read, Update, Delete functionality
+- **Component Composition**: Reusable TodoForm and TodoItem components
+
+## 🎓 Learning Points
+
+1. **State Management**: Using Context API instead of prop drilling
+2. **Data Persistence**: Saving and loading data from localStorage
+3. **CRUD Operations**: Implementing full CRUD functionality
+4. **useEffect**: Using useEffect for side effects (localStorage)
+5. **Component Design**: Building reusable form and item components
+
+## 🛠️ Technologies
+
+- React 18
+- Vite
+- Tailwind CSS
+- ESLint
+
+## 📝 Features Breakdown
+
+### Add Todo
+- Create new todo items with a form
+- Each todo has a unique ID
+
+### Update Todo
+- Edit existing todo items
+- Update todo content
+
+### Delete Todo
+- Remove todos from the list
+- Updates persist in localStorage
+
+### Toggle Complete
+- Mark todos as complete/incomplete
+- Visual indication of completion status
+
+### Local Storage
+- Todos are automatically saved to localStorage
+- Data persists across browser sessions
+- Data loads on component mount
+
+## 💾 Data Persistence
+
+Todos are stored in browser localStorage and automatically:
+- Save when todos are added, updated, or deleted
+- Load when the application starts
+- Persist across browser sessions
