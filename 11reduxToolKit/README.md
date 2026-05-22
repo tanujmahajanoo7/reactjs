@@ -28,6 +28,12 @@ npm install
 
 # Run the development server
 npm run dev
+
+# Install redux toolkit
+npm install @reduxjs/toolkit
+
+# Install react redux
+npm install react-redux
 ```
 
 The app will open at `http://localhost:5173` (or another port if 5173 is busy).
