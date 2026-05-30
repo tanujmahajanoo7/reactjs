@@ -4,6 +4,8 @@ import {addTodo} from '../features/todo/todoSlice'
 
 function AddTodo() {
     const [input,setInput] = useState('')
+
+    // dispatch will change the value with the help of reducers from the store
     const dispatch = useDispatch()
 
     const addTodoHandler = (e) => {
