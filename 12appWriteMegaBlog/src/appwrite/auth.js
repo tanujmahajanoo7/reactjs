@@ -1,20 +1,18 @@
-import conf from "../conf/conf.js"
-
+import conf from "../conf/conf.js";
 import { Client, Account, ID } from "appwrite";
 
-
-export class AuthService{
+export class AuthService {
     client = new Client();
     account;
 
-    constructor(){
+    constructor() {
         this.client
             .setEndpoint(conf.appwriteUrl)
             .setProject(conf.appwriteProjectId);
         this.account = new Account(this.client);
     }
 
-    async createAccount({email, password, name}){
+    async createAccount({ email, password, name }) {
         try {
             const userAccount = await this.account.create(
                 ID.unique(),
@@ -22,8 +20,8 @@ export class AuthService{
                 password,
                 name
             );
-            if(userAccount) {
-                return this.login({email, password});
+            if (userAccount) {
+                return this.login({ email, password });
             } else {
                 return userAccount;
             }
@@ -32,7 +30,7 @@ export class AuthService{
         }
     }
 
-    async login({email, password}){
+    async login({ email, password }) {
         try {
             return await this.account.createEmailSession(email, password);
         } catch (error) {
@@ -58,24 +56,10 @@ export class AuthService{
     }
 }
 
-const AuthService = new AuthService();
+const authService = new AuthService();
+export default authService;
 
-export default AuthService;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ---------- we are not exposing all this logic in ui so ----------
+// ---------- we are not exposing all this logic in ui so not implementing below code here. just for reference ----------
 
 // const client = new Client()
 //     .setProject('<PROJECT_ID>') // Your project ID
